@@ -26,7 +26,10 @@ class LinkedList:
         """ To parse the linked list and print all elements.
         If a linked list is nested in the parsing one it parse it
         of course. """
-        space = '    ' * nb #+ '|'
+
+        space = '    ' * nb
+        print(space + '.')
+
         if self.start_node == None:
             raise ParsingError
         else:
@@ -302,7 +305,9 @@ def main():
     lklist_2.add('another data')
     lklist_2.add([1,2,3,])
     lklist.add(lklist_2)
-    lklist.add({'hero': "Mc-Fly"})
+    lklist_4 = LinkedList()
+    lklist_4.add('pour voir un truc')
+    lklist.add(lklist_4)
     lklist.parse_list()
 
 if __name__ == '__main__':
